@@ -1,68 +1,124 @@
-header nav {
-    background-color: #f8f8f8;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-  }
-  
-  header ul {
-    list-style: none;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Hebrew:wght@700&display=swap');
+* {
     margin: 0;
-    display: flex;
-    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
   }
   
-  header li {
-    padding: 0 20px;
-  }
-  
-  header a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+  body {
+    font-family: 'Arial', sans-serif;
   }
 
-  header a:hover {
-    color: #CCCCCC;
+  .home-main {
+    text-align: center;
   }
 
-  main {
-    padding: 20px;
-    background-color: #F0F0F0;
+  .home-header {
+    background: #ffffff;
+    padding: 1em;
   }
   
-  .hero {
-    text-align: center;
-    padding: 40px 0;
-  }
-  
-  .hero-text h1 {
-    color: #333;
-  }
-  
-  .content p {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  
-  footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  nav ul {
+    list-style-type: none;
     display: flex;
     justify-content: space-around;
   }
   
-  footer a {
-    text-decoration: none;
-    color: white;
+  nav ul li button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  footer a:hover {
-    color: #CCCCCC;
+  nav ul li button a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  nav ul li button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .home-main {
+    text-align: center;
+  }
+  
+  .hero {
+    position: relative;
+    margin: 0;
+  }
+  
+  .hero-text h1 {
+    position: absolute;
+    top: 80%;
+    left: 10px;
+    transform: translate(0, -20%);
+    color: #fff;
+    z-index: 1;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  .hero img {
+    width: 100%;
+    display: block;
+  }
+  
+  .content {
+    padding: 0;
+    background: #f9f9f9;
+  }
+
+  .content-text h1 {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+    color: #fff;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .hero + .content img {
+    margin-top: 0;
+  }
+  
+  .content img {
+    width: 100%;
+    display: block;
+    margin-top: 0;
+  }
+  
+  .home-footer {
+    background: #333;
+    color: #fff;
+    padding: 1em;
+  }
+  
+  .home-footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .home-footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .home-footer ul li a:hover {
+    color: #ccc;
   }
   

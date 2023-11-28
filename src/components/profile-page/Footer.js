@@ -3,7 +3,7 @@ import './footer.css';
 
 function Footer() {
   return (
-    <footer>
+    <footer className="profile-footer">
       <button>Manajemen akun</button>
       <button>Privasi & data</button>
       <button>Keamanan</button>

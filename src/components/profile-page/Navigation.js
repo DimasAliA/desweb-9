@@ -3,7 +3,7 @@ import './nav.css';
 
 function Navigation() {
   return (
-    <nav>
+    <nav className='nav-profile'>
       <ul>
         <li><button>Beranda</button></li>
         <li><button>Teman</button></li>
