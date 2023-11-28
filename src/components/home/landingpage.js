@@ -6,10 +6,12 @@ const Header = () => (
     <header className='home-header'>
       <nav>
         <ul>
-          <li><button><a href="#social-media">Social media</a></button></li>
-          <li><button><a href="#about">About</a></button></li>
-          <li><button><a href="#sign-up">Sign up</a></button></li>
-          <li><button><Link to="/profile">Login</Link></button></li>
+          <li><button className='social-media-btn'><a href="#social-media">Social media</a></button></li>
+        </ul>
+        <ul>
+          <li><button className='about-btn'><a href="#about">About</a></button></li>
+          <li><button className='signup-btn'><a href="#sign-up">Sign up</a></button></li>
+          <li><button className='login-btn'><Link to="/profile">Login</Link></button></li>
         </ul>
       </nav>
     </header>
