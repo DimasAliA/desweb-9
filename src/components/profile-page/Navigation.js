@@ -1,7 +1,7 @@
 import React from 'react';
 import './nav.css';
 
-function Navigation() {
+function Navigation({ profileImage }) {
   return (
     <nav className='nav-profile'>
       <ul>
@@ -11,7 +11,7 @@ function Navigation() {
       </ul>
       <input type="search" placeholder="Cari..." />
       <div className="profile-circle">
-        <img src="/images/wibu.jpg" alt="Profile" />
+        <img src={profileImage} alt="Profile" />
       </div>
     </nav>
   );
