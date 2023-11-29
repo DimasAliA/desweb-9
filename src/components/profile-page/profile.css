@@ -102,19 +102,34 @@
   .edit-btn[type="button"] {
     padding: 10px 20px;
     max-width: 200px;
-    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s;
     position: relative;
+    font-weight: bold;
     left: 72%;
     
   }
   
   .edit-btn[type="button"]:hover {
     background-color: #218838;
+  }
+  .edit-btn-save {
+    background-color: #28a745;
+  }
+  
+  .edit-btn-edit {
+    background-color: #dc3545;
+  }
+  
+  .edit-btn[type="button"]:hover {
+    background-color: #218838;
+  }
+  
+  .edit-btn-edit[type="button"]:hover {
+    background-color: #c82333;
   }
 
   @media (max-width: 768px) {

@@ -94,9 +94,12 @@ function ProfileForm({ profileImage,setProfileImage }) {
               />
             </div>
           </div>
-          <button className='edit-btn' type="button" onClick={isEditing ? handleSubmit : handleEdit}>
+          <button 
+            className={`edit-btn ${isEditing ? 'edit-btn-save' : 'edit-btn-edit'}`}
+            type="button" 
+            onClick={isEditing ? handleSubmit : handleEdit}>
             {isEditing ? 'Simpan' : 'Edit'}
-          </button>
+        </button>
         </form>
       </div>
     </div>
