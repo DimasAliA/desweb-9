@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+.hero {
+  position: relative;
+  width: 100%;
+}
+
 .bglogin-container {
   position: relative;
   display: flex;
@@ -13,6 +18,20 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.login-card {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 300px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .bglogin-background {

@@ -3,7 +3,7 @@ import './nav.css';
 
 function Navigation({ profileImage }) {
   return (
-    <nav className='nav-profile'>
+    <nav className='nav-profile-page'>
       <ul>
         <li><button>Beranda</button></li>
         <li><button>Teman</button></li>

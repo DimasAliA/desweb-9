@@ -6,22 +6,6 @@
     margin-top: 20px;
   }
   
-  .login-container {
-    background-color: #f8f8f8;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    margin: 0 auto; /* Mengatur formulir login ke tengah */
-  }
-  
-  .login-container h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
   .input-group {
     margin-bottom: 15px;
     text-align: left;
