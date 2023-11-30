@@ -1,0 +1,96 @@
+/* Add your updated register page styles here */
+.register-card {
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100wv;
+    text-align: center;
+    margin: 20px; /* Menyesuaikan jarak antara formulir registrasi dan konten utama */
+  }
+  
+  .register-form {
+    text-align: left;
+  }
+  
+  .register-form h2 {
+    color: black;
+    font-size: 36px;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    margin-bottom: 5px;
+    display: block;
+    color: black;
+    font-size: 15px;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-weight: 700;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .gender-options {
+    margin-top: 5px;
+  }
+  
+  .gender-options label {
+    margin-right: 15px;
+  }
+  
+  .register-btn,
+  .google-register-btn {
+    background-color: rgb(240, 57, 57);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .register-btn:hover,
+  .google-register-btn:hover {
+    opacity: 0.8;
+  }
+  
+  .or-divider {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .google-register-btn {
+    background-color: #4285F4;
+  }
+  
+  .login-link {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .login-link a {
+    color: rgb(240, 57, 57);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
