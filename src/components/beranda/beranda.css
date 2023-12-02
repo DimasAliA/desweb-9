@@ -1,4 +1,4 @@
-/* Reset some default styles */
+
 body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
@@ -8,7 +8,6 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-/* Header styling */
 .header {
   text-align: center;
   margin-bottom: 20px;
@@ -18,25 +17,35 @@ body {
   color: #333;
 }
 
-/* Card container styling */
+.custom-size-card {
+  width: 1100px; /* Atur lebar sesuai keinginan Anda */
+  height: 200px; /* Atur tinggi sesuai keinginan Anda */
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
 .card-container {
   display: flex;
   justify-content: space-between;
 }
 
-/* Side navigation styling */
+
 .side-nav {
-  background-color: #333; /* Warna latar belakang side navigation */
+  background-color: #ffffff;
   padding: 50px;
   border-radius: 8px;
-  margin-right: 10px; /* Menambahkan spasi di sisi kanan */
+  margin-right: 20px;
   margin-left: 20px;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .side-nav a {
   display: block;
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   padding: 10px;
   margin-bottom: 10px;
@@ -45,17 +54,17 @@ body {
 }
 
 .side-nav a:hover {
-  background-color: #555; /* Warna latar belakang saat hover */
+  background-color: #555;
 }
 
-/* Individual card styling */
+
 .card {
   flex: 1;
   border-radius: 8px;
   padding: 15px;
   margin: 0 10px;
-  background-color: #f4f4f4; /* Warna latar belakang card */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan card */
+  background-color: #f4f4f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
@@ -72,7 +81,7 @@ body {
   color: #666;
 }
 
-/* Footer styling */
+
 .footer {
   text-align: center;
   margin-top: 20px;

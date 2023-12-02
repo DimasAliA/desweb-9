@@ -12,15 +12,13 @@ const SocialMediaCard = () => {
             <a href="#saved">Saved</a>
             <a href="#messages">Messages</a>
           </div>
-          <div className="card">
-            <img src="https://placekitten.com/600/300" alt="Your Post" />
-            <h2>Your Name</h2>
+          <div className="custom-size-card">
+            <h2>Question</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
           </div>
-          <div className="card">
-            <img src="https://placekitten.com/600/300" alt="Recommended Friend" />
-            <h2>Recommended Friend</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
+          <div className="side-nav">
+            <p>Contacts</p>
+            <p>Lorem ipsum d</p>
           </div>
         </div>
       </div>
@@ -28,11 +26,18 @@ const SocialMediaCard = () => {
       <div className="container">
         <div className="card-container">
           <div className="side-nav">
-            <h1>Stories</h1>
+            <p>Stories</p>
             <a href="#home">Home</a>
             <a href="#explore">Explore</a>
             <a href="#saved">Saved</a>
             <a href="#messages">Messages</a>
+          </div>
+          <div className="card">
+            <img src="https://placekitten.com/600/300" alt="Your Post" />
+            <h2>Your Name</h2>
+          </div>
+          <div className="side-nav">
+            <p>Recommended</p>
           </div>
         </div>
       </div>
