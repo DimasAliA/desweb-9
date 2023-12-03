@@ -18,8 +18,8 @@ body {
 }
 
 .custom-size-card {
-  width: 1100px; /* Atur lebar sesuai keinginan Anda */
-  height: 200px; /* Atur tinggi sesuai keinginan Anda */
+  width: 1100px; 
+  height: 250px; 
   padding: 20px;
   background-color: #f4f4f4;
   border-radius: 8px;
@@ -34,8 +34,10 @@ body {
 
 
 .side-nav {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
-  padding: 50px;
+  padding: 20px;
   border-radius: 8px;
   margin-right: 20px;
   margin-left: 20px;
@@ -44,7 +46,8 @@ body {
 }
 
 .side-nav a {
-  display: block;
+  display: flex;
+  align-items: center;
   color: #000000;
   text-decoration: none;
   padding: 10px;
@@ -57,6 +60,19 @@ body {
   background-color: #555;
 }
 
+.nav-icon {
+  width: 20px; 
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 100%;
+}
+
+.nav-icon1 {
+  width: 40px; 
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 100%;
+}
 
 .card {
   flex: 1;
@@ -65,6 +81,11 @@ body {
   margin: 0 10px;
   background-color: #f4f4f4;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card- {
+  max-width: 100%;
+  border-radius: 5px;
 }
 
 .card img {
@@ -89,4 +110,112 @@ body {
 
 .footer p {
   color: #888;
+}
+
+
+.nav-button {
+  background-color: #abb6bd;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.side-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-nav li {
+  margin-bottom: 10px;
+}
+
+.nav-button:hover {
+  background-color: #2980b9;
+}
+
+.nav-button:active {
+  background-color: #216a94;
+}
+
+.nav-icon {
+  width: 20px; 
+  height: 20px;
+  margin-right: 10px;
+}
+
+
+
+/* postingan */
+.instagram-post {
+  display: flex;
+  flex-direction: column;
+  width: 1100px;  
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.post-image {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+.actions {
+  padding: 10px;
+}
+
+.like-share {
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.action-button:hover {
+  color: #3498db;
+}
+
+.comments {
+  margin-top: 10px;
+}
+
+.comment {
+  margin-bottom: 5px;
+}
+
+.comment-username {
+  font-weight: bold;
+  margin-right: 5px;
 }
