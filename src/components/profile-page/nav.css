@@ -7,6 +7,12 @@
   color: white;
 }
 
+.nav-profile-page button a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
 .nav-profile-page ul {
   list-style: none;
   display: flex;
