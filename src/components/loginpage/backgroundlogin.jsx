@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 import Login from './loginform';
 import './bglogin.css';
@@ -18,29 +18,42 @@ const Header = () => (
     </header>
   );
   
-  const MainContent = () => (
-    <main clas className='home-main'>
-      <section className="hero">
-        <div className="hero-text">
-          <h1>Become a part of the world of ideas</h1>
-        </div>
-        <img src="/images/bawah.png" alt="Hero" />
-      </section>
-      <section className="content">
-        <div className="content-text">
-          <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
-        </div>
-        <img src="/images/atas.png" alt="Photographer" />
-      </section>
-        {/* Tambahkan section untuk formulir login */}
-        <section className="login-section">
-        <div className="login-container">
-            <Login />
-        </div>
-        </section>
-        </main>
-    );
+  const MainContent = () => {
+    const loginSectionRef = useRef(null);
   
+    useEffect(() => {
+      if (loginSectionRef.current) {
+        const yOffset = -200;
+        const elementPosition = loginSectionRef.current.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset + yOffset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    }, []);
+  
+    return (
+      <main className='home-main'>
+        <section className="hero" >
+          <div className="hero-text">
+            <h1>Become a part of the world of ideas </h1>
+          </div>
+          <img src="/images/bawah.png" alt="Hero" />
+        </section >
+        <section className="content" ref={loginSectionRef}>
+          <div className="content-text">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+          </div>
+          <img src="/images/atas.png" alt="Photographer" />
+        </section>
+          {/* Tambahkan section untuk formulir login */}
+          <section className="login-section">
+          <div className="login-container">
+              <Login />
+          </div>
+        </section>
+      </main>
+    );
+  };
+
   const Footer = () => (
     <footer className='home-footer'>
       <ul>
