@@ -10,8 +10,8 @@ const Header = () => (
         </ul>
         <ul>
           <li><button className='about-btn'><a href="#about">About</a></button></li>
-          <li><button className='signup-btn'><a href="#sign-up">Sign up</a></button></li>
-          <li><button className='login-btn'><Link to="/profile">Login</Link></button></li>
+          <li><button className='signup-btn'><a href="/register">Sign up</a></button></li>
+          <li><button className='login-btn'><Link to="/login">Login</Link></button></li>
         </ul>
       </nav>
     </header>

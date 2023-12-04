@@ -42,6 +42,7 @@
   
   .login-btn,
   .google-login-btn {
+    width: 100%;
     background-color: rgb(240, 57, 57);
     color: white;
     border: none;

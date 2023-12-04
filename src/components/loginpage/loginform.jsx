@@ -1,6 +1,6 @@
 // loginform.jsx
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './login.css';
 
 const Login = () => {
@@ -34,7 +34,7 @@ const Login = () => {
       setError('');
 
       // Redirect to the profile page
-      navigate('/profile');
+      navigate('/beranda');
     } else {
       // Login failed
       setError('Invalid email or password. Please try again.');
@@ -66,15 +66,11 @@ const Login = () => {
           />
         </div>
         {error && <span className="error-message">{error}</span>}
-        <p className="forgot-password-link">
-          <Link to="/forgot-password">Forgot your password?</Link>
-        </p>
+        <p className="login-link">
+            Belum punya akun? <a href="/register">Daftar Akun</a>
+          </p>
         <button type="submit" className="login-btn">
           Login
-        </button>
-        <p className="or-divider">OR</p>
-        <button type="button" className="google-login-btn">
-          Login with Google
         </button>
       </form>
     </div>

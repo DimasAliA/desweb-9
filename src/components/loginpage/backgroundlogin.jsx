@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Login from './loginform';
 import './bglogin.css';
 
@@ -11,8 +11,8 @@ const Header = () => (
         </ul>
         <ul>
           <li><button className='about-btn'><a href="#about">About</a></button></li>
-          <li><button className='signup-btn'><a href="#sign-up">Sign up</a></button></li>
-          <li><button className='login-btn'><Link to="/profile">Login</Link></button></li>
+          <li><button className='signup-btn'><a href="/register">Sign up</a></button></li>
+          {/* <li><button className='login-btn'><Link to="/profile">Login</Link></button></li> */}
         </ul>
       </nav>
     </header>
