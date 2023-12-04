@@ -2,48 +2,58 @@ import React, { useState, useEffect } from 'react';
 import './profile.css';
 
 function ProfileForm({ profileImage, setProfileImage }) {
-    const [profile, setProfile] = useState({
-        firstName: '',
-        lastName: '',
-        about: '',
-        username: '',
-    });
+  const [profile, setProfile] = useState({
+    firstName: '',
+    lastName: '',
+    about: '',
+    username: '',
+  });
 
-    const [isEditing, setIsEditing] = useState(false);
-
-    useEffect(() => {
-      const currentUsername = localStorage.getItem('currentUsername');
-      if (currentUsername) {
-        const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
-        const userData = registeredUsers.find(user => user.username === currentUsername);
-        if (userData) {
-          setProfile({
-            firstName: userData.fullName.split(' ')[0] || '',
-            lastName: userData.fullName.split(' ')[1] || '',
-            about: '',
-            username: userData.username,
-          });
-          if (userData.profileImage) {
-            setProfileImage(userData.profileImage);
-          }
+  const [isEditing, setIsEditing] = useState(false);
+  useEffect(() => {
+    const currentUsername = localStorage.getItem('currentUsername');
+    if (currentUsername) {
+      const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+      const userData = registeredUsers.find(user => user.username === currentUsername);
+      if (userData) {
+        const nameParts = userData.fullName ? userData.fullName.split(' ') : ['', ''];
+        const firstName = nameParts.shift();
+        const lastName = nameParts.join(' ');
+        setProfile({
+          firstName: firstName || '',
+          lastName: lastName || '',
+          about: userData.about || '',
+          username: userData.username,
+        });
+        if (userData.profileImage) {
+          setProfileImage(userData.profileImage);
         }
       }
-    }, []);
+    }
+  }, []);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setProfile({ ...profile, [name]: value });
-    };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setProfile({ ...profile, [name]: value });
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        localStorage.setItem('profile', JSON.stringify(profile));
-        setIsEditing(false);
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const currentUsername = localStorage.getItem('currentUsername');
+    if (currentUsername) {
+      const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+      const userIndex = registeredUsers.findIndex(user => user.username === currentUsername);
+      if (userIndex !== -1) {
+        registeredUsers[userIndex] = { ...registeredUsers[userIndex], ...profile };
+        localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
+      }
+      setIsEditing(false);
+    }
+  };
 
-    const handleEdit = () => {
-        setIsEditing(true);
-    };
+  const handleEdit = () => {
+    setIsEditing(true);
+  };
 
     const handleImageChange = (e) => {
         if (e.target.files && e.target.files[0]) {
