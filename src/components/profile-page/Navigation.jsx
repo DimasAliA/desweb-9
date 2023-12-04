@@ -9,9 +9,11 @@ function Navigation({ profileImage }) {
         <li><button>Teman</button></li>
         <li><button>Buat</button></li>
       </ul>
-      <input type="search" placeholder="Cari..." />
-      <div className="profile-circle">
-        <img src={profileImage} alt="Profile" />
+      <div className="search-profile-container">
+        <input className='nav-search' type="search" placeholder="Cari..." />
+        <div className="profile-circle">
+          <img src={profileImage} alt="Profile" />
+        </div>
       </div>
     </nav>
   );
