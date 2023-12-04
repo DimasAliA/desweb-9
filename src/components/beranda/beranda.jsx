@@ -10,7 +10,7 @@ const SocialMediaCard = () => {
   const [newComment, setNewComment] = useState("");
   const [userProfile, setUserProfile] = useState({
     imageUrl: "https://placekitten.com/50/50",
-    username: "JohnDoe",
+    username: "Felix",
   });
 
   const handleLike = () => {

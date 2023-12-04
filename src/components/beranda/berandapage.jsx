@@ -6,7 +6,9 @@ const Homepage1 = () => {
   return (
     <>
       <Navigation />
-      <SocialMediaCard />
+      <div className="container">
+        <SocialMediaCard />
+      </div>
     </>
   );
 };
