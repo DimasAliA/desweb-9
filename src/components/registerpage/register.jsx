@@ -43,6 +43,7 @@ const RegisterForm = () => {
       const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
       registeredUsers.push(formData);
       localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
+      localStorage.setItem('currentUsername', formData.username);
       setShowSuccessMessage(true);
       setFormData({
         fullName: '',
