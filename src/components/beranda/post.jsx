@@ -4,7 +4,7 @@ import "./post.css";
 
 const Posting = () => {
   const [postImage, setPostImage] = useState("");
-  const [isLiked, setIsLiked] = useState(false);
+  const [likeStatus, setLikeStatus] = useState({});
   const [showComments, setShowComments] = useState({});
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
@@ -16,8 +16,11 @@ const Posting = () => {
     setPostImage(imageUrl);
   };
 
-  const handleLike = () => {
-    setIsLiked(!isLiked);
+  const handleLike = (postId) => {
+    setLikeStatus((prevLikeStatus) => ({
+      ...prevLikeStatus,
+      [postId]: !prevLikeStatus[postId],
+    }));
   };
 
   const handleToggleComments = (postId) => {
@@ -91,10 +94,22 @@ const Posting = () => {
 
       {posts.map((post) => (
         <div className="post" key={post.id}>
+          <div className="user-profile">
+            <img
+              src="https://placekitten.com/50/50"
+              alt="Profile"
+              className="profile-image"
+            />
+            <span className="username">felix</span>
+          </div>
+
           <img src={post.postImage} alt="Post" className="post-image" />
 
           <div className="post-icons">
-            <span className={`icon ${isLiked ? "liked" : ""}`} onClick={handleLike}>
+            <span
+              className={`icon ${likeStatus[post.id] ? "liked" : ""}`}
+              onClick={() => handleLike(post.id)}
+            >
               <FaHeart />
             </span>
             <span className="icon" onClick={() => handleToggleComments(post.id)}>
@@ -143,9 +158,7 @@ const Posting = () => {
                     e.key === "Enter" && handleAddCommentToPost(post.id)
                   }
                 />
-                <button onClick={() => handleAddCommentToPost(post.id)}>
-                  
-                </button>
+                <button onClick={() => handleAddCommentToPost(post.id)}></button>
               </div>
             </div>
           )}
