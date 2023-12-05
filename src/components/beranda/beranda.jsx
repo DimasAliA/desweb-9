@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaHeart, FaComment, FaSave } from "react-icons/fa";
+import { FaHeart, FaComment, FaSave, FaTrash } from "react-icons/fa";
 import "./beranda.css";
 
 const SocialMediaCard = () => {
@@ -25,11 +25,16 @@ const SocialMediaCard = () => {
     if (newComment.trim() !== "") {
       const updatedComments = [
         ...comments,
-        { text: newComment, user: userProfile },
+        { id: Date.now(), text: newComment, user: userProfile },
       ];
       setComments(updatedComments);
       setNewComment("");
     }
+  };
+
+  const handleDeleteComment = (commentId) => {
+    const updatedComments = comments.filter(comment => comment.id !== commentId);
+    setComments(updatedComments);
   };
 
   const handleKeyDown = (e) => {
@@ -40,6 +45,7 @@ const SocialMediaCard = () => {
   };
 
   return (
+    
     <div className="post">
       <div className="user-profile">
         <img
@@ -68,8 +74,8 @@ const SocialMediaCard = () => {
       {showComments && (
         <div className="comments">
           <ul>
-            {comments.map((comment, index) => (
-              <li key={index}>
+            {comments.map((comment) => (
+              <li key={comment.id}>
                 <div className="comment-user-profile">
                   <img
                     src={comment.user.imageUrl}
@@ -81,6 +87,9 @@ const SocialMediaCard = () => {
                   </span>
                 </div>
                 <p>{comment.text}</p>
+                <span className="delete-comment" onClick={() => handleDeleteComment(comment.id)}>
+                  <FaTrash />
+                </span>
               </li>
             ))}
           </ul>
